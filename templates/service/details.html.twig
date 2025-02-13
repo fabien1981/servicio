@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le service{% endblock %}
+
+{% block body %}
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">{{ service.name }}</h1>
+        <img src="/uploads/{{ service.image }}" style="width:100%; margin-top: 20px; margin-bottom:20px;/>
+        <p class="lead text-body-secondary">{{ service.description | raw }}</p>
+        <p>
+          <a href="{{ service.link }}" target="_blank" class="btn btn-primary my-2">Voir les services </a>
+          <a href="#" class="btn btn-secondary my-2">En savoir plus</a>
+        </p>
+      </div>
+    </div>
+  </section>
+    
+{% endblock %}
